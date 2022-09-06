@@ -2,7 +2,7 @@ import FullWidthLayout from "hocs/layouts/FullWidthLayout"
 
 function Home() {
   return (
-    <FullWidthLayout>
+      <FullWidthLayout>
       Home
       </FullWidthLayout>
   )
