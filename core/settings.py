@@ -62,7 +62,7 @@ DJANGO_APPS = [
 
 # Apps creadas para el proyecto
 PROJECT_APPS =[
-
+    'apps.user'
 ]
 
 # Apps instaladas con pip
