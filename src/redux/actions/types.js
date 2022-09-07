@@ -1,7 +1,7 @@
 // Alerts
 export const SET_ALERT = "SET_ALERT";
 export const REMOVE_ALERT = "REMOVE_ALERT";
-/* 
+
 // Loading
 export const SET_LOADING = "SET_LOADING";
 
@@ -25,7 +25,7 @@ export const GET_USER_DETAILS_FAIL = "GET_USER_DETAILS_FAIL";
 export const GET_MY_USER_DETAILS_SUCCESS = "GET_MY_USER_DETAILS_SUCCESS";
 export const GET_MY_USER_DETAILS_FAIL = "GET_MY_USER_DETAILS_FAIL";
 
-
+/* 
 // Categories
 export const GET_CATEGORIES_SUCCESS = 'GET_CATEGORIES_SUCCESS';
 export const GET_CATEGORIES_FAIL = 'GET_CATEGORIES_FAIL';

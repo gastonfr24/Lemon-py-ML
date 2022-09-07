@@ -40,13 +40,13 @@ function Navbar() {
         className={({ open }) =>
           classNames(
             open ? 'fixed inset-0 z-40 overflow-y-auto' : '',
-            'bg-white shadow-sm lg:static lg:overflow-y-visible'
+            'bg-white dark:bg-zinc-900 shadow-sm lg:static lg:overflow-y-visible'
           )
         }
       >
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 dark:bg-zinc-900 dark:text-gray-200">
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
@@ -74,8 +74,15 @@ function Navbar() {
                         />
                       </div>
                     </div>
+                   
+                <div className='ml-14 float-right'>
+                    <DarkModeSwitch/>
+                    </div>
                   </div>
                 </div>
+
+                
+
                 <div className="flex items-center md:absolute md:right-0 md:inset-y-0 lg:hidden">
                   {/* Mobile menu button */}
                   <Popover.Button className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -88,13 +95,6 @@ function Navbar() {
                   </Popover.Button>
                 </div>
                 <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
-                  <a
-                    href="#"
-                    className="ml-5 flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </a>
 
                   {/* Profile dropdown */}
                   <Menu as="div" className="flex-shrink-0 relative ml-5">

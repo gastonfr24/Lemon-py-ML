@@ -22,7 +22,7 @@ module.exports = {
               "dark-second": "#242526",
               "dark-third": "#100f14",
               "dark-txt": "#c1c1c1",
-              dark: "#1C1D1F",
+              dark: "#27272a",
               "fb-gray": "#f0f2f5",
               morado: "#7C24D9",
               "gray-footer-500": "#1C1D1F",
