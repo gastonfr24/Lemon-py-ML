@@ -2,10 +2,6 @@
 export const SET_ALERT = "SET_ALERT";
 export const REMOVE_ALERT = "REMOVE_ALERT";
 
-// Loading
-export const SET_LOADING = "SET_LOADING";
-
-
 
 // Web3
 export const LOAD_ETHEREUM_BALANCE_SUCCESS = "LOAD_ETHEREUM_BALANCE_SUCCESS";
@@ -24,6 +20,10 @@ export const GET_USER_DETAILS_SUCCESS = "GET_USER_DETAILS_SUCCESS";
 export const GET_USER_DETAILS_FAIL = "GET_USER_DETAILS_FAIL";
 export const GET_MY_USER_DETAILS_SUCCESS = "GET_MY_USER_DETAILS_SUCCESS";
 export const GET_MY_USER_DETAILS_FAIL = "GET_MY_USER_DETAILS_FAIL";
+
+
+// Loading
+export const SET_LOADING = "SET_LOADING";
 
 /* 
 // Categories
