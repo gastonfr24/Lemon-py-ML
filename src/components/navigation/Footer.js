@@ -1,4 +1,9 @@
- 
+ // limon cute
+ // https://cdn-icons-png.flaticon.com/512/2396/2396691.png
+
+ // lemon pie
+// https://i.postimg.cc/XvkN6xg9/lemon.png
+
  function Footer() {
   return (
     <footer className="p-4 bg-gray-50 sm:p-6 dark:bg-zinc-800">
@@ -6,8 +11,8 @@
         <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
                 <a href="https://flowbite.com" className="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-8" alt="FlowBite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2396/2396691.png" className="mr-3 h-8 text-3xl" alt="LemonPy Logo" />
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lemon Py</span>
                 </a>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

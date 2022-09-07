@@ -17,7 +17,7 @@ export const loadweb3 =()=> async dispatch =>{
     if(window.ethereum){
         const accounts = await window.ethereum.request({
            // metodo para requerir cuenta del usuario
-            method:'eth_requeresAccounts'
+           method: "eth_requestAccounts",
         })
         // guardamos la cuenta en el local storage
         localStorage.setItem('account', accounts[0]);

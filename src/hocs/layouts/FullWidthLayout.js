@@ -3,8 +3,40 @@ import { connect } from "react-redux";
 import Footer from "components/navigation/Footer";
 import Navbar from "components/navigation/Navbar";
 import Alert from "components/alerts/alert";
+import { useEffect } from "react";
+import { get_network_id, loadweb3 } from "redux/actions/web3";
 
-const FullWidthLayout = ({children}) =>{
+const FullWidthLayout = ({children, loadweb3, get_network_id}) =>{
+
+    if(window.ethereum){
+        window.ethereum.on("chainChanged", handleChainChanged)
+        function handleChainChanged(_chainId) {
+            window.ethereum.reload()
+        }
+    }
+
+
+
+
+
+
+    useEffect(() => {
+      
+        const fetchData = async () =>{
+            //Traemos la cuenta de localStoreage 
+            if(localStorage.getItem('account')){
+                loadweb3()
+            }
+        }
+
+        if(window.ethereum){
+            get_network_id()
+        }
+
+        fetchData()
+    }, [])
+    
+
     return(
     
         <>
@@ -27,5 +59,5 @@ const mapStateToProps = state =>({
 })
 
 export default connect(mapStateToProps,{
-
+    loadweb3, get_network_id
 })(FullWidthLayout);

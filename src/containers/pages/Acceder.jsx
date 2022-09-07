@@ -1,6 +1,7 @@
 import { connect } from "react-redux"
 
 import FullWidthLayout from "hocs/layouts/FullWidthLayout"
+import { Navigate } from "react-router-dom"
 
 // Icons
 import { ChevronRightIcon } from "@heroicons/react/outline"
@@ -9,10 +10,19 @@ import LoadingFullWidth from "components/loaders/LoadingFullWidth"
 // Web3
 import { loginweb3 } from 'redux/actions/web3'
 
+
  function Acceder({
     loading,
-    loginweb3
+    loginweb3,
+    account
  }) {
+
+    if(account){
+        return <Navigate to='/' />
+
+
+    }
+
   return (
     <FullWidthLayout>
         <div className="container mx-auto px-4 py-3 sm:px-6 xl:px-12">
@@ -73,7 +83,8 @@ import { loginweb3 } from 'redux/actions/web3'
 }
 
 const mapStateToProps = state =>({
-    loading: state.web3.loading
+    loading: state.web3.loading,
+    account: state.web3.account
 })
 
 export default connect(mapStateToProps,{
