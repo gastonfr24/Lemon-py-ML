@@ -7,6 +7,7 @@ import { SearchIcon } from '@heroicons/react/solid'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import DarkModeSwitch from 'components/darkmode'
+import { NavLink } from 'react-router-dom'
 
 
 const user = {
@@ -31,7 +32,30 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Navbar() {
+function Navbar({account}) {
+
+  const authLinks = (
+    <Fragment>
+           <NavLink
+            to='/'
+           className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+             Cerrar Sesión
+        </NavLink>
+    </Fragment>
+  )
+
+  const guestLinks = (
+    <Fragment>
+           <NavLink
+            to='/acceder'
+           className="ml-6 inline-flex items-center px-4 py-2 border border-zinc-300 dark:border-zinc-800 text-sm font-medium rounded-md shadow-sm text-gray-900 dark:text-zinc-200 bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-300"
+          >
+             Acceder
+        </NavLink>
+    </Fragment>
+  )
+
   return (
     <>
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
@@ -50,7 +74,7 @@ function Navbar() {
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
-                    <a href="#">
+                    <a href="/">
                     Home
                     </a>
                   </div>
@@ -77,6 +101,7 @@ function Navbar() {
                    
                 <div className='ml-14 float-right'>
                     <DarkModeSwitch/>
+                    
                     </div>
                   </div>
                 </div>
@@ -93,53 +118,15 @@ function Navbar() {
                       <MenuIcon className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Popover.Button>
+                  <div className=" lg:flex lg:items-center lg:justify-end xl:col-span-4">
+                  {account ? authLinks:guestLinks}
                 </div>
-                <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
+             </div>
 
-                  {/* Profile dropdown */}
-                  <Menu as="div" className="flex-shrink-0 relative ml-5">
-                    <div>
-                      <Menu.Button className="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <span className="sr-only">Open user menu</span>
-                        <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
-                      </Menu.Button>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items className="origin-top-right absolute z-10 right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none">
-                        {userNavigation.map((item) => (
-                          <Menu.Item key={item.name}>
-                            {({ active }) => (
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block py-2 px-4 text-sm text-gray-700'
-                                )}
-                              >
-                                {item.name}
-                              </a>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </Menu.Items>
-                    </Transition>
-                  </Menu>
-
-                  <a
-                    href="#"
-                    className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    New Project
-                  </a>
+             <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
+                  {account ? authLinks:guestLinks}
                 </div>
+
               </div>
             </div>
 
@@ -196,7 +183,7 @@ function Navbar() {
   )
 }
 const mapStateToPros = state =>({
-
+  account: state.web3.account
 })
 
 export default connect(mapStateToPros,{

@@ -37,6 +37,7 @@ body {
 
 body.dark {
   background-color: #27272a ;
+  color: #e5e7eb;
 }
 
 @layer base {
