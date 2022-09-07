@@ -6,6 +6,7 @@ import { Menu, Popover, Transition } from '@headlessui/react'
 import { SearchIcon } from '@heroicons/react/solid'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
+import DarkModeSwitch from 'components/darkmode'
 
 
 const user = {
@@ -50,11 +51,7 @@ function Navbar() {
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
                     <a href="#">
-                      <img
-                        className="block h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                        alt="Workflow"
-                      />
+                    Home
                     </a>
                   </div>
                 </div>
