@@ -23,15 +23,16 @@ class ListCategoryView(APIView):
                     item['name'] = category.name
                     item['thumbnail'] = category.thumbnail.url
 
-                    item['subcategries'] = []
-                    for cat in categories:
-                        subitem = []
-                        if cat.parent and cat.parent.id == category.id:
-                            subitem['id'] = cat.id
-                            subitem['name'] = cat.name
-                            subitem['thumbnail'] = cat.thumbnail.url
+                    item['sub_categories'] = []
 
-                            item['subcategories'].append(subitem)
+                    for cat in categories:
+                        sub_item = {}
+                        if cat.parent and cat.parent.id == category.id:
+                            sub_item['id'] = cat.id
+                            sub_item['name'] = cat.name
+                            sub_item['thumbnail'] = cat.thumbnail.url
+
+                            item['sub_categories'].append(sub_item)
 
                     result.append(item)
 

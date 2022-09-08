@@ -292,6 +292,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
+                  <img src="https://cdn-icons-png.flaticon.com/512/2396/2396691.png" className="mr-3 h-8 text-3xl" alt="LemonPy Logo" />
                     <a href="/">
                     Lemon Py
                     </a>

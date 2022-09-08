@@ -20,7 +20,7 @@ const BlogCategories =({get_categories, categories}) =>{
         <div className="py-8 sm:py-4  xl:max-w-7xl xl:mx-auto xl:px-8">
           <div className="px-4 sm:px-6 sm:flex sm:items-center sm:justify-between lg:px-8 xl:px-0">
             <h2 className="text-2xl dark:text-gray-300 font-gilroy-bold tracking-tight text-gray-900">All Categories</h2>
-            <Link to="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+            <Link to="#" className="hidden text-sm font-semibold text-yellow-400 hover:text-yellow-300 sm:block">
               Browse all categories<span aria-hidden="true"> &rarr;</span>
             </Link>
           </div>
@@ -65,9 +65,9 @@ const BlogCategories =({get_categories, categories}) =>{
           </div>
   
           <div className="mt-6 px-4 sm:hidden">
-            <Link to="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+            <a href="#" className="block text-sm font-semibold text-zinc-600 hover:text-zinc-500">
               Browse all categories<span aria-hidden="true"> &rarr;</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

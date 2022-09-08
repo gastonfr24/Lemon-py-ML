@@ -29,13 +29,24 @@ const BlogCard = (data) => {
             <p className="text-sm font-medium text-indigo-600">
               <Link
                 to={`/blog/category/${post.category.id}`}
-                className="font-bold hover:underline"
+                  className={`
+              ${
+                  post.category.name === "Machine Learning"
+                      ? " bg-green-100 text-green-700"
+                      : post.category.name === "Deep Learning"
+                      ? "bg-rose-100 text-rose-700"
+                      : post.category.name === "Inteligencia Artificial"
+                      ? "bg-blue-100 text-blue-700"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              } 
+              inline-flex items-center px-3 py-0.5 rounded-full text-sm font-gilroy-bold`}
+              
               >
                 {post.category.name}
               </Link>
             </p>
             <Link to={`/blog/post/${post.slug}`} className="block mt-2">
-              <p className="text-xl font-semibold text-gray-900">
+              <p className="text-xl font-semibold text-zinc-900 dark:text-zinc-200">
                 {post.title}
               </p>
               <p className="mt-3 text-base text-gray-500">{truncate(post.description)}</p>

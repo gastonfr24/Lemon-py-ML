@@ -20,7 +20,7 @@ function BlogPost (
            {
             post ?
             <>
-                       <div className="relative py-16 bg-white overflow-hidden">
+                       <div className="relative py-16 dark:bg-zinc-800 overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div className="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
           <svg
@@ -91,14 +91,24 @@ function BlogPost (
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
           <h1>
-            <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
+            <span className={`
+                    ${
+                        post.category.name === "Machine Learning"
+                            ? " text-green-400"
+                            : post.category.name === "Deep Learning"
+                            ? " text-rose-400"
+                            : post.category.name === "Inteligencia Artificial"
+                            ? " text-blue-400"
+                            : " text-gray-400 hover:bg-gray-200"
+                    } 
+            block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase`}>
               {post.category.name}
             </span>
-            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-zinc-200 dark:font-gilroy-bold dark:text-5xl sm:text-4xl">
               {post.title}
             </span>
           </h1>
-          <p className="mt-8 text-xl text-gray-500 leading-8">
+          <p className="mt-8 text-xl text-gray-500 dark:text-zinc-400 leading-8">
       {post.description}
           </p>
         </div>
