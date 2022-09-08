@@ -3,6 +3,8 @@
 
  // lemon pie
 // https://i.postimg.cc/XvkN6xg9/lemon.png
+import { Link } from "react-router-dom"
+
 
  function Footer() {
   return (
@@ -10,10 +12,10 @@
     <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-                <a href="https://flowbite.com" className="flex items-center">
+                <Link to="/" className="flex items-center">
                     <img src="https://cdn-icons-png.flaticon.com/512/2396/2396691.png" className="mr-3 h-8 text-3xl" alt="LemonPy Logo" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lemon Py</span>
-                </a>
+                </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>

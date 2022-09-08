@@ -26,12 +26,17 @@ import { loginweb3 } from 'redux/actions/web3'
 
   return (
     <FullWidthLayout>
-        <div className="container mx-auto px-4 py-3 sm:px-6 xl:px-12">
-    <div className="flex flex-col items-center justify-center space-y-6 text-center">
-      <h1 className="text-4xl font-bold tracking-normal sm:text-5xl lg:text-6xl dark:text-zinc-400">Acceder con Web3</h1>
-      <p className="max-w-screen-sm text-lg text-gray-600 sm:text-2xl dark:text-white">We write about tips, best tools, and resources to create and sell interactive online programming courses.</p>
+        <div className="bg-white dark:bg-zinc-800">
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="dark:text-zinc-200 mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+            Acceder con Web3
+          </p>
+          <p className="max-w-screen-sm text-lg text-gray-600 sm:text-2xl dark:text-zinc-400">We write about tips, best tools, and resources to create and sell interactive online programming courses.</p>
+
+        </div>
+      </div>
     </div>
-  </div>
   {
     !loading ?
     (  <div className="bg-white dark:bg-dark-main hover:dark:bg-dark-second hover:bg-gray-50 shadow overflow-hidden sm:rounded-md">
