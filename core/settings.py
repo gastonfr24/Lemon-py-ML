@@ -62,7 +62,10 @@ DJANGO_APPS = [
 
 # Apps creadas para el proyecto
 PROJECT_APPS =[
-    'apps.user'
+    'apps.user',
+    'apps.blog',
+    'apps.category',
+    'apps.contacts'
 ]
 
 # Apps instaladas con pip
@@ -207,3 +210,6 @@ AUTHENTICATION_BACKENDS = (
 FILE_UPLOAD_PERMISSIONS = 0o640
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+    # Active Campaign
+ACTIVE_CAMPAIGN_URL=os.environ.get('ACTIVE_CAMPAIGN_URL')
+ACTIVE_CAMPAIGN_KEY=os.environ.get('ACTIVE_CAMPAIGN_KEY')
