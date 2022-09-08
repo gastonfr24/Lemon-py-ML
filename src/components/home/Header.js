@@ -5,62 +5,22 @@ const Header =()=>{
 
 
       <>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white dark:bg-zinc-800">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
                 <h1 className="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
-                <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+                <p className="max-w-2xl mb-6 font-light text-zinc-500 lg:mb-8 md:text-lg lg:text-xl dark:text-zinc-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
                 <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                     Get started
                     <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
-                <a href="#" className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                <a href="#" className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-zinc-900 border border-zinc-300 rounded-lg hover:bg-zinc-100 focus:ring-4 focus:ring-zinc-100 dark:text-white dark:border-zinc-700 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
                     Speak to Sales
                 </a> 
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
+                <img src="https://i.postimg.cc/XvkN6xg9/lemon.png" alt="mockup"/>
             </div>                
-        </div>
-    </section>
-
-
-
-
-
-    <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-            <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
-            <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-        
-                <div>
-                <a href="#" className="flex justify-center items-center text-8xl">
-                    
-               <SiPandas/>                                                                                  
-                </a>
-                {/* <h1 classNameName="justify-center intem-center float-right font-semibold text-xl">Pandas</h1> */}
-                </div>
-
-                 <a href="#" className="flex justify-center items-center text-8xl">
-                <SiNumpy/>                                                                                  
-                </a>
-
-                <a href="#" className="flex justify-center items-center text-8xl">
-                <SiScikitlearn/>                                                                                  
-                </a> 
-
-                <a href="#" className="flex justify-center items-center text-8xl">
-                <SiTensorflow/>                                                                                  
-                </a>
-
-                <a href="#" className="flex justify-center items-center text-8xl">
-                <SiKeras/>                                                                                  
-                </a>
-                
-                 <a href="#" className="flex justify-center items-center text-8xl">
-                <SiPostgresql/>                                                                                  
-                </a>
-            </div>
         </div>
     </section>
       </>

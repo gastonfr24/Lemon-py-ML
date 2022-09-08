@@ -19,9 +19,9 @@ const BlogListSearch=({
             {
                 blog_list ? 
                 <>
-                <div className="relative bg-gray-50 pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8">
+                <div className="relative  pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8">
                     <div className="absolute inset-0">
-                        <div className="bg-white h-1/3 sm:h-2/3" />
+                        <div className=" h-1/3 sm:h-2/3" />
                     </div>
                     <div className="relative max-w-7xl mx-auto">
                         
