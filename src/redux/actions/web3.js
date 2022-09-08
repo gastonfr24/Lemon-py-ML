@@ -12,6 +12,8 @@ SET_LOADING
 
 import { ethers } from 'ethers';
 
+import { create_user, get_my_user_detail } from './user';
+
 // Crear cuenta con web3
 export const loadweb3 =()=> async dispatch =>{
     if(window.ethereum){
@@ -77,7 +79,12 @@ export const loginweb3 =()=> async dispatch =>{
 
 
         // Aca vamos a crear un usuario de Django
-
+        await dispatch(
+            create_user()
+        )
+        await dispatch(
+            get_my_user_detail()
+            )
 
 
         await dispatch({

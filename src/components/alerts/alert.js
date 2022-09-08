@@ -25,11 +25,11 @@ import {SpeakerphoneIcon} from '@heroicons/react/solid'
                                         />
                                     </span>
 
-                                    <p className="ml-3 font-medium text-white ">
-                                        <span className="md:hidden text-white">
+                                    <p className="ml-3 font-medium dark:text-white ">
+                                        <span className="md:hidden dark:text-white">
                                             {alert.msg}
                                         </span>
-                                        <span className="hidden md:inline text-white">
+                                        <span className="hidden md:inline dark:text-white">
                                             {alert.msg}
                                         </span>
                                     </p>

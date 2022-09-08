@@ -35,7 +35,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Navbar({account, ethereum_balance, network}) {
+function Navbar({account, ethereum_balance, network, my_user}) {
 
 
   const [effectLogin, setEffectLogin] = useState(false)
@@ -55,7 +55,7 @@ function Navbar({account, ethereum_balance, network}) {
                     <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-8 bg-white dark:bg-dark-main p-7">
                             <NavLink
-                                to='/'
+                                to={`/perfil/${my_user && my_user.account}`}
                                 className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out border dark:border-dark-third shadow dark:hover:bg-dark-third hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-50"
                             >
                                 <div className="flex h-8 w-8 shrink-0 items-center justify-center text-white dark:text-dark-txt sm:h-12 sm:w-12">
@@ -405,7 +405,8 @@ function Navbar({account, ethereum_balance, network}) {
 const mapStateToPros = state =>({
   account: state.web3.account,
   ethereum_balance: state.web3.ethereum_balance,
-  network: state.web3.network
+  network: state.web3.network,
+  my_user: state.user.my_user
 })
 
 export default connect(mapStateToPros,{

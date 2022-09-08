@@ -14,10 +14,11 @@ import { loginweb3 } from 'redux/actions/web3'
  function Acceder({
     loading,
     loginweb3,
-    account
+    account,
+    my_user
  }) {
 
-    if(account){
+    if(my_user){
         return <Navigate to='/' />
 
 
@@ -84,7 +85,8 @@ import { loginweb3 } from 'redux/actions/web3'
 
 const mapStateToProps = state =>({
     loading: state.web3.loading,
-    account: state.web3.account
+    account: state.web3.account,
+    my_user: state.user.my_user
 })
 
 export default connect(mapStateToProps,{
