@@ -12,6 +12,7 @@ module.exports = {
       "./forms/*.html",
       "./ecommerce/*.html",
       "./project/*.html",
+      'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
@@ -157,5 +158,6 @@ module.exports = {
       require("@tailwindcss/aspect-ratio"),
       require("tailwindcss-question-mark"),
       require("tailwind-scrollbar-hide"),
+      require('flowbite/plugin')
   ],
 };
