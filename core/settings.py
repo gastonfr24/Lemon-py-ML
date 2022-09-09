@@ -66,7 +66,8 @@ PROJECT_APPS =[
     'apps.blog',
     'apps.category',
     'apps.contacts',
-    'apps.ml'
+    'apps.ml',
+    'apps.projects'
 ]
 
 # Apps instaladas con pip
