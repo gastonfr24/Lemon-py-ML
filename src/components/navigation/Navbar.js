@@ -11,7 +11,8 @@ import {ChevronDownIcon} from '@heroicons/react/solid'
 
 import DarkModeSwitch from 'components/darkmode'
 import { NavLink } from 'react-router-dom'
-
+import { Dropdown } from 'flowbite-react/lib/esm/components'
+import { Link } from 'react-router-dom'
 
 const user = {
   name: 'Chelsea Hagon',
@@ -305,7 +306,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 dark:bg-zinc-900 dark:text-gray-200">
-              <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
+              <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-2">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
                   <img src="https://cdn-icons-png.flaticon.com/512/2396/2396691.png" className="mr-3 h-8 text-3xl" alt="LemonPy Logo" />
@@ -315,39 +316,49 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                   </div>
                 </div>
                 <div className="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
-                  <div className="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
-                  <form onSubmit={e=>onSubmit(e)} className="w-full">
-                      
-                      <label htmlFor="search" className="sr-only">
-                        Search
-                      </label>
-                      <div className="relative">
-                        <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
-                          <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                        </div>
-                        <input
-                          id="search"
-                          name="search"
-                          required
-                          onChange={(e)=>{handleChange(e)}}
-                          className="block w-full bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 dark:focus:text-zinc-300  focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                          placeholder="Search"
-                          type="search"
-                        />
-                      </div>
-                      </form>
-                   
-                <div className='ml-14 float-right'>
-                    <DarkModeSwitch/>
-                    
-                    </div>
-                  </div>
-                </div>
+                                    <div className="flex items-center  px-2 pl-4 py-4 md:max-w-xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
+                                        <form onSubmit={e=>onSubmit(e)} className="w-full">
+                                            <label
+                                                htmlFor="search"
+                                                className="sr-only"
+                                            >
+                                                Search
+                                            </label>
+                                            <div className="relative">
+                                                <button
+                                                type="submit"
+                                                className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                                                    <SearchIcon
+                                                        className="h-5 w-5 text-gray-400"
+                                                        aria-hidden="true"
+                                                    />
+                                                </button
+                                                
+                                                >
+                                                <input
+                                                    id="search"
+                                                    name="search"
+                                                    required
+                                                    onChange={(e)=>{handleChange(e)}}
+                                                    className="block w-full font-gilroy-medium dark:text-dark-txt bg-search dark:bg-dark-bg border-1.5 dark:border-dark-bg border-gray-500 rounded-full py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+                                                    placeholder="Search"
+                                                    type="search"
+                                                />
+                                            </div>
+                                        
+                                        </form>
+                                        <div className='ml-5'>
+                                        <DarkModeSwitch/>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
 
                 
 
                 <div className="flex items-center md:absolute md:right-0 md:inset-y-0 lg:hidden">
                 <div className=" lg:flex lg:items-center lg:justify-end mr-6 xl:col-span-4">
+
                   {account ? authLinks:guestLinks}
                 </div>
                  
@@ -362,8 +373,21 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                   </Popover.Button>
               
              </div>
-
+                  
              <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
+
+             <NavLink to="/blog" className="mr-1 text-l dark:hover:text-white hover:text-blue-600 text-gray-600 dark:text-dark-txt text-md font-gilroy-semibold">
+                        Blog
+                    </NavLink>
+
+                    <NavLink to="/contact" className="mx-2 text-l dark:hover:text-white hover:text-blue-600 text-gray-600 dark:text-dark-txt text-md font-gilroy-semibold">
+                        Contact
+                    </NavLink>
+
+                    <NavLink to="/machine-learning" className="mx-1 text-l dark:hover:text-white hover:text-blue-600 text-gray-600 dark:text-dark-txt text-md font-gilroy-semibold">
+                        IA
+                    </NavLink>
+
                   {account ? authLinks:guestLinks}
                 </div>
 
@@ -419,7 +443,12 @@ function Navbar({account, ethereum_balance, network, my_user}) {
           </>
         )}
       </Popover>
+
+
+
+
     </>
+    
   )
 }
 const mapStateToPros = state =>({

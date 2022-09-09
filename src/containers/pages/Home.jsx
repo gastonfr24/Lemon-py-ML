@@ -8,6 +8,7 @@ import BlogCategories from "components/blog/BlogCategories"
 import { get_blog_list, get_blog_list_page } from "redux/actions/blog"
 
 import Header from "components/home/Header"
+import Content from "components/home/Content"
 
 function Home({categories,
     get_categories,
@@ -33,6 +34,8 @@ function Home({categories,
     <BlogCategories/>
     <BlogList blog_list={blog_list && blog_list} 
            cout={count && count} get_blog_list_page={get_blog_list_page}/>
+      
+{/*       <Content/> */}
        
       </FullWidthLayout>
   )

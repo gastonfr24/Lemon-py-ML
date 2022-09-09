@@ -14,6 +14,8 @@ import BlogPost from 'containers/pages/blog/Blog_post';
 import Contact from 'containers/pages/contact/Contact';
 import BlogCategory from 'containers/pages/blog/categories/BlogCategory';
 import Search from 'containers/pages/Search';
+import CategoriesList from 'containers/pages/blog/categories/CategoriesList';
+import About from 'components/about/About';
 
 function App() {
   return (
@@ -29,9 +31,13 @@ function App() {
 
           <Route path="/perfil/:user_account" element={<Profile/>} />
 
-        {/* Blog */}
+        {/* Otros */}
 
-          <Route path='/contact' element={<Contact/>} />
+        <Route path='/about' element={<About/>} />
+
+        <Route path='/contact' element={<Contact/>} />
+
+        {/* Blog */}
 
         <Route path='/Blog' element={<Blog/>} />
 
@@ -40,6 +46,9 @@ function App() {
         <Route path='/Blog/category/:category_id' element={<BlogCategory/>} />
 
         <Route path='/search/:term' element={<Search/>} />
+
+        
+        <Route path='/Blog/categories' element={<CategoriesList/>} />
 
 
         </Routes>

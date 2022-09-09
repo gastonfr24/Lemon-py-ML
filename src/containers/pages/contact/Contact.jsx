@@ -89,17 +89,17 @@ function Contact(){
         <FullWidthLayout>
             <div className="relative ">
       <div className="absolute inset-0">
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50" />
+        <div className="absolute inset-y-0 left-0 w-1/2" />
       </div>
       <div className="relative max-w-7xl mx-auto lg:grid lg:grid-cols-5">
         <div className=" py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
           <div className="max-w-lg mx-auto">
-            <h2 className="text-2xl font-gilroy-black tracking-tight text-gray-900 sm:text-3xl">Get in touch</h2>
-            <p className="mt-3 text-lg leading-6 text-gray-500">
+            <h2 className="text-2xl font-gilroy-black tracking-tight text-gray-900 sm:text-3xl dark:text-gray-300">Get in touch</h2>
+            <p className="mt-3 text-lg leading-6 text-gray-500 dark:text-gray-400">
               Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
               arcu.
             </p>
-            <dl className="mt-8 text-base text-gray-500">
+            <dl className="mt-8 text-base text-gray-500 dark:text-gray-400">
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
@@ -110,21 +110,21 @@ function Contact(){
               <div className="mt-6">
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
-                  <PhoneIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                  <PhoneIcon className="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
                   <span className="ml-3">+1 (555) 123-4567</span>
                 </dd>
               </div>
               <div className="mt-3">
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
-                  <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                  <MailIcon className="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-400" aria-hidden="true" />
                   <span className="ml-3">support@example.com</span>
                 </dd>
               </div>
             </dl>
-            <p className="mt-6 text-base text-gray-500">
+            <p className="mt-6 text-base text-gray-500 dark:text-gray-400">
               Looking for careers?{' '}
-              <a href="#" className="font-gilroy-medium text-gray-700 underline">
+              <a href="#" className="font-gilroy-medium text-gray-700 underline dark:text-gray-300">
                 View all job openings
               </a>
               .
@@ -146,7 +146,7 @@ function Contact(){
                   name='name'
                   onChange={e => onChange(e)}
                   required
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 dark:placeholder-zinc-400 dark:bg-zinc-900 dark:border-zinc-700 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="Nombre Completo"
                 />
               </div>
@@ -160,7 +160,7 @@ function Contact(){
                   onChange={e=>onChange(e)}
                   type="email"
                   required
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
+                  className="dark:placeholder-zinc-400 dark:bg-zinc-900 dark:border-zinc-700 block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="Email"
                 />
               </div>
@@ -174,7 +174,7 @@ function Contact(){
                   value={phone}
                   onChange={e=>onChange(e)}
                   required
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
+                  className="dark:placeholder-zinc-400 dark:bg-zinc-900 dark:border-zinc-700 block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="Teléfono"
                 />
               </div>
@@ -188,7 +188,7 @@ function Contact(){
                   name='subject'
                   onChange={e => onChange(e)}
                   required
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
+                  className="dark:placeholder-zinc-400 dark:bg-zinc-900 dark:border-zinc-700 block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="Asunto del mail"
                 />
               </div>
@@ -201,14 +201,14 @@ function Contact(){
                   rows={4}
                   value={message}
                   onChange={e => onChange(e)}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md"
+                  className="dark:placeholder-zinc-400 dark:bg-zinc-900 dark:border-zinc-700 block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md"
                   placeholder="Message"
                   required
                 />
               </div>
 
                 <div>
-                    <label className="block text-sm font-gilroy-medium text-gray-700">
+                    <label className="block text-sm font-gilroy-medium text-gray-700 dark:text-zinc-500">
                         Presupuesto (opcional)
                     </label>
                     <select
@@ -216,9 +216,9 @@ function Contact(){
                         name="budget"
                         onChange={e => onChange(e)}
                         value={budget}
-                        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                        className="dark:placeholder-zinc-400 dark:bg-zinc-900 dark:border-zinc-700 mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
                     >
-                        <option value="" disabled selected>Sin Presupuesto</option>
+                        <option value="" className="dark:text-zinc-700" disabled selected>Sin Presupuesto</option>
                         <option value="0-5,000">$0 - $5,000</option>
                         <option value="5,000-10,000">$5,000 - $10,000</option>
                         <option value="10,000+">$10,000+</option>
@@ -229,7 +229,7 @@ function Contact(){
                           checked={agreed}
                           onChange={setAgreed}
                           className={classNames(
-                            agreed ? 'bg-blue-600' : 'bg-gray-200',
+                            agreed ? 'bg-blue-600' : 'bg-gray-300 dark:bg-zinc-900',
                             'relative inline-flex flex-shrink-0 h-6 w-11 border-2 dark:text-dark-txt border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
                             )}
                         >

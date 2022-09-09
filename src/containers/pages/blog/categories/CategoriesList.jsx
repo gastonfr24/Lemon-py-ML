@@ -1,28 +1,44 @@
-import { connect } from "react-redux"
-import { get_categories } from "redux/actions/categories"
-import { useEffect } from "react"
-import { Link } from "react-router-dom"
-import LoadingCard from "components/loaders/LoadingCard"
-import LoadingCardCategory from "components/loaders/LoadingCardCategory"
+import FullWidthLayout from 'hocs/layouts/FullWidthLayout'
+import { connect } from 'react-redux';
+import { get_categories } from 'redux/actions/categories';
+import { Link } from 'react-router-dom';
+import LoadingCardCategory from 'components/loaders/LoadingCardCategory';
+import { useEffect } from 'react';
+import BlogCategoryList from 'components/blog/BlogCategoryList';
 
-const BlogCategories =({get_categories, categories}) =>{
 
+ function CategoriesList({get_categories, categories}) {
+  
+  
+  
     useEffect(() => {
-      get_categories()
+        get_categories()
+  
+      }, [])
+  
+  
+  
+    return (
+    <FullWidthLayout>
 
-    }, [])
-    
-    
+<div className="bg-white dark:bg-zinc-800">
+      <div className="max-w-7xl mx-auto py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="mt-1 text-4xl font-gilroy-bold text-gray-900 dark:text-zinc-200 sm:text-5xl sm:tracking-tight lg:text-6xl">
+            Todas las Categorias
+          </p>
+          <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-zinc-400">
+            Start building for free, then add a site plan to go live. Account plans unlock additional features.
+          </p>
+        </div>
+      </div>
+    </div>
 
 
-    return(
         <div className="bg-white dark:bg-zinc-800 rounded-xl">
         <div className="py-8 sm:py-4  xl:max-w-7xl xl:mx-auto xl:px-8">
           <div className="px-4 sm:px-6 sm:flex sm:items-center sm:justify-between lg:px-8 xl:px-0">
             <h2 className="text-2xl dark:text-gray-300 font-gilroy-bold tracking-tight text-gray-900">All Categories</h2>
-            <Link to="/Blog/categories" className="hidden text-sm font-semibold text-gray-400 hover:text-gray-300 sm:block">
-              Browse all categories<span aria-hidden="true"> &rarr;</span>
-            </Link>
           </div>
   
           <div className="mt-4 flow-root">
@@ -71,13 +87,16 @@ const BlogCategories =({get_categories, categories}) =>{
           </div>
         </div>
       </div>
-    )
+    </FullWidthLayout>
+  )
 }
 
-const mapToStateProps = state =>({
+const mapStateToProps = state =>({
     categories : state.categories.categories
+
 })
 
-export default connect(mapToStateProps,{
+export default connect(mapStateToProps,{
     get_categories
-})(BlogCategories)
+
+    })(CategoriesList);

@@ -1,11 +1,30 @@
 const LoadingFullWidth = () => {
     return (
-        <div className="animate-pulse mt-4 max-w-full mx-auto grid lg:grid-cols-3 gap-2  items-start">
-            <div className="col-span-2 p-4 rounded-lg bg-gray-200 dark:bg-dark-third lg:mx-4 py-4" />
-            <div className="lg:row-span-3 bg-gray-200 dark:bg-dark-third rounded-lg w-full lg:col-span-1 col-span-3 py-16" />
-            <div className="col-span-2 p-4 rounded-lg bg-gray-200 dark:bg-dark-third lg:mx-4 py-4" />
-            <div className="col-span-2 p-4 rounded-lg bg-gray-200 dark:bg-dark-third lg:mx-4 py-4" />
+        <div
+        className="animate-pulse bg-gray-300 dark:bg-zinc-900 block transition duration-300 ease-in-out cursor-pointer p-6 rounded-xl"
+    >
+        <div className="flex items-center px-4 py-4 sm:px-6">
+            <div className="min-w-0 flex-1 flex items-center">
+                <div className="flex-shrink-0">
+ 
+                </div>
+                <div className="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+                    <div>
+
+                    </div>
+                    <div className="hidden md:block">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                 
+                </div>
+            </div>
         </div>
+    </div>
     );
 };
 

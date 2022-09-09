@@ -27,13 +27,14 @@ import { loginweb3 } from 'redux/actions/web3'
   return (
     <FullWidthLayout>
         <div className="bg-white dark:bg-zinc-800">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-8 px-4 sm:py-12 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="dark:text-zinc-200 mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+          <p className="mt-1 text-4xl font-gilroy-bold text-gray-900 dark:text-zinc-200 sm:text-5xl sm:tracking-tight lg:text-6xl">
             Acceder con Web3
           </p>
-          <p className="max-w-screen-sm text-lg text-gray-600 sm:text-2xl dark:text-zinc-400">We write about tips, best tools, and resources to create and sell interactive online programming courses.</p>
-
+          <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500 dark:text-zinc-400">
+            Start building for free, then add a site plan to go live. Account plans unlock additional features.
+          </p>
         </div>
       </div>
     </div>

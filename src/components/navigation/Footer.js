@@ -3,6 +3,10 @@
 
  // lemon pie
 // https://i.postimg.cc/XvkN6xg9/lemon.png
+
+//derecha
+//https://i.postimg.cc/vTQsNJkN/user.png
+
 import { Link } from "react-router-dom"
 
 
@@ -19,13 +23,13 @@ import { Link } from "react-router-dom"
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Acerca de</h2>
                     <ul className="text-gray-600 dark:text-gray-400">
                         <li className="mb-4">
-                            <a href="#" className="hover:underline">Flowbite</a>
+                            <a href="/about" className="hover:underline">Sobre Mi</a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">Tailwind CSS</a>
+                            <a href="/contact" className="hover:underline">Contacto</a>
                         </li>
                     </ul>
                 </div>

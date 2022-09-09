@@ -16,6 +16,11 @@ class Post(models.Model):
         ('published', 'Published'),
     )
 
+    options2 = (
+        ('yes', 'Yes'),
+        ('no', 'No'),
+    )
+
     blog_uuid = models.UUIDField(default=uuid.uuid4, unique=True)
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
@@ -31,6 +36,10 @@ class Post(models.Model):
     published = models.DateTimeField(default= timezone.now)
 
     status = models.CharField(max_length=10, choices=options, default='draft')
+
+   # ml_project= models.OneToOneField()
+
+    proyecto= models.CharField(max_length=10, choices=options2, default='no')
 
     objects = models.Manager()  # default manager
     postobjects = PostObjects()  # custom manager

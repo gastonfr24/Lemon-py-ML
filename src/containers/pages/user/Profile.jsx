@@ -10,11 +10,14 @@ import { setAlert } from "redux/actions/alert";
 //Icons
 import { BadgeCheckIcon, PhoneIcon } from "@heroicons/react/solid";
 import {MailIcon} from "@heroicons/react/solid";
+
+  //loaders
+import LoaderBanner from "components/loaders/loaderBanner";
 import LoadingFullWidth from "components/loaders/LoadingFullWidth";
+import LoaderProfile from "components/loaders/LoaderProfile";
 
 function Profile({get_user_detail, user, setAlert}) {
  
-  
 
  const params = useParams()
  const user_account = params.user_account
@@ -39,7 +42,7 @@ function Profile({get_user_detail, user, setAlert}) {
                             alt=""
                         />
                     ) : (
-                        <LoadingFullWidth />
+                        <LoaderBanner />
                     )}
                 </div>
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +89,7 @@ function Profile({get_user_detail, user, setAlert}) {
                                             )}
                                         </>
                                     ) : (
-                                        <LoadingFullWidth />
+                                        <LoaderProfile/>
                                     )}
                                     {user && user.verified ? (
                                         <BadgeCheckIcon
@@ -97,7 +100,9 @@ function Profile({get_user_detail, user, setAlert}) {
                                         <></>
                                     )}
                                 </h1>
-                                <p className="text-sm font-gilroy-medium text-gray-500">
+                              {
+                                user ?(
+                                    <p className="text-sm font-gilroy-medium text-gray-500">
                                     Account: {user && user.account.slice(0, 6)}
                                     ...{user && user.account.slice(-4)}
                                     <CopyToClipboard
@@ -126,6 +131,9 @@ function Profile({get_user_detail, user, setAlert}) {
                                         </button>
                                     </CopyToClipboard>
                                 </p>
+                                ):
+                                <></>
+                              }
                             </div>
                             <div className="mt-6 flex flex-col justify-stretch space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4"></div>
                         </div>

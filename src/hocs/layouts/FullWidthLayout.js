@@ -6,6 +6,7 @@ import Alert from "components/alerts/alert";
 import { useEffect } from "react";
 import { get_network_id, loadweb3 } from "redux/actions/web3";
 import { get_my_user_detail } from "redux/actions/user";
+import Subnavbar from "components/navigation/Subnavbar";
 
 const FullWidthLayout = ({children, loadweb3, get_network_id, my_user, get_my_user_detail}) =>{
 
@@ -45,7 +46,6 @@ const FullWidthLayout = ({children, loadweb3, get_network_id, my_user, get_my_us
     
         <>
         <Navbar/>
-
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     {children}
