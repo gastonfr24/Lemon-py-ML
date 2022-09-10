@@ -21,5 +21,9 @@ class UserSerializer(serializers.ModelSerializer):
             'url',
             'birthday',
             'profile_info',
-            'date_created'
+            'date_created',
+            'pais',
+            'edad',
+            'salario',
+            'comprado',
         ]

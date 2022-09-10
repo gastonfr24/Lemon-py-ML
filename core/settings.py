@@ -67,7 +67,6 @@ PROJECT_APPS =[
     'apps.category',
     'apps.contacts',
     'apps.ml',
-    'apps.projects'
 ]
 
 # Apps instaladas con pip
@@ -75,7 +74,8 @@ THIRD_PARTY_APPS =[
     'corsheaders',
     'rest_framework',
     'ckeditor',
-    'ckeditor_uploader',  
+    'ckeditor_uploader',
+    'import_export' 
 ]
 
 # Todas las apps

@@ -54,5 +54,10 @@ class UserAccount(models.Model):
 
     date_created = models.DateTimeField(auto_now_add=True)
 
+    pais = models.CharField(max_length=255, blank=True, null=True)
+    edad = models.IntegerField(blank=True, null=True)
+    salario = models.IntegerField( blank=True, null=True)
+    comprado = models.BooleanField(blank=True, null=True)
+
     def __str__(self):
         return self.account

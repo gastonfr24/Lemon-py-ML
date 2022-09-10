@@ -16,6 +16,7 @@ import BlogCategory from 'containers/pages/blog/categories/BlogCategory';
 import Search from 'containers/pages/Search';
 import CategoriesList from 'containers/pages/blog/categories/CategoriesList';
 import About from 'components/about/About';
+import RegresionLS from 'containers/pages/ml/RegresionLS';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
 
         
         <Route path='/Blog/categories' element={<CategoriesList/>} />
+        <Route path='/ml/simple-regresion' element={<RegresionLS/>} />
 
 
         </Routes>

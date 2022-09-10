@@ -1,0 +1,11 @@
+id,account,username,first_name,last_name,is_active,is_staff,verified,request_verified,picture,banner,location,url,birthday,profile_info,date_created,pais,edad,salario,comprado
+10,0x7f3ec1fcda443a7d6c7e66930542ffce8ed1c65c,0x7f3ec1fcda443a7d6c7e66930542ffce8ed1c65c,Felipe,Noruega,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:35:47,Chile,37,134000,1
+9,0x422d524e8d071070779ae18c5e1345d14d5c2d9d,0x422d524e8d071070779ae18c5e1345d14d5c2d9d,German,Falopa,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:34:04,Argetina,50,166000,0
+8,0xf0baf630c30cb73078cb25cdd18c11b814cf000e,0xf0baf630c30cb73078cb25cdd18c11b814cf000e,Albert,Einstein,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:31:21,Chile,48,158000,1
+7,0xfa27dd4f8ed2adf725df17a6dd7bf5e27daf20dd,0xfa27dd4f8ed2adf725df17a6dd7bf5e27daf20dd,Marcela,Hernandez,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:29:02,Argetina,,104000,0
+6,0xcc89db061115aa29f3de79dda99e90e0c25c9dd3,0xcc89db061115aa29f3de79dda99e90e0c25c9dd3,Silvina,Olivares,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:26:54,Chile,35,116000,1
+5,0x4b0bd5ad4fb5d668b4be52de3873bcec87609118,0x4b0bd5ad4fb5d668b4be52de3873bcec87609118,Maximo,Fernandez,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:24:56,Peru,40,,1
+4,0x646d461f4b4ff337dfd5eaf79134ebc81a430a13,0x646d461f4b4ff337dfd5eaf79134ebc81a430a13,Camila,Torres,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:23:01,Argetina,38,122000,0
+3,0xa882f0f528bf802619e83d4883c43923329a80a1,0xa882f0f528bf802619e83d4883c43923329a80a1,Elias,Galban,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:20:47,Peru,30,108000,0
+2,0x0cbcdc83ad0a48e30da723655995bd425e1f4f64,0x0cbcdc83ad0a48e30da723655995bd425e1f4f64,Victor,Franco,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-09 21:17:42,Chile,44,144000,0
+1,0x639961acb32f8f175eec80a7124501725de45055,0x639961acb32f8f175eec80a7124501725de45055,Gaston,Franco,1,0,0,0,users/user_default.jpg,users/banner_default.jpg,,,,,2022-09-07 20:23:31,Argetina,21,96000,1
