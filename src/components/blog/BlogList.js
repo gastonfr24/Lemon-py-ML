@@ -20,7 +20,7 @@ const BlogList=({
             {
                 blog_list ? 
                 <>
-                <div className="relative bg-gray-50  dark:bg-zinc-800 pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8 dark:bg-zinc-800">
+                <div className="relative bg-gray-50 pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8 dark:bg-zinc-800">
                     <div className="absolute inset-0">
                         <div className="bg-white dark:bg-zinc-800 h-1/3 sm:h-2/3" />
                     </div>

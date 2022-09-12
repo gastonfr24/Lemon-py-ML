@@ -54,3 +54,6 @@ export const GET_SEARCH_BLOG_FAIL = 'GET_SEARCH_BLOG_FAIL';
 // Regresion Linenal Simple
 export const CREATE_RLS_SUCCESS = "CREATE_RLS_SUCCESS";
 export const CREATE_RLS_FAIL = "CREATE_RLS_FAIL";
+
+export const GET_RLS_SUCCESS = 'GET_RLS_SUCCESS';
+export const GET_RLS_FAIL = 'GET_RLS_FAIL';

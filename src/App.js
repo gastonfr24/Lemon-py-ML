@@ -48,9 +48,11 @@ function App() {
 
         <Route path='/search/:term' element={<Search/>} />
 
-        
         <Route path='/Blog/categories' element={<CategoriesList/>} />
-        <Route path='/ml/simple-regresion' element={<RegresionLS/>} />
+
+        {/* Machine Learning */}
+
+        <Route path='/ML/regresion-lineal-simple' element={<RegresionLS/>} />
 
 
         </Routes>

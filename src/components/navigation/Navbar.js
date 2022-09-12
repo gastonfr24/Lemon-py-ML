@@ -14,29 +14,22 @@ import { NavLink } from 'react-router-dom'
 import { Dropdown } from 'flowbite-react/lib/esm/components'
 import { Link } from 'react-router-dom'
 
-const user = {
-  name: 'Chelsea Hagon',
-  email: 'chelsea.hagon@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
+
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Teams', href: '#', current: false },
-  { name: 'Directory', href: '#', current: false },
+  { name: 'Blog', href: '/Blog', current: true },
+  { name: 'Contact', href: '/contact', current: false },
+  { name: 'IA Projects', href: '/ML/regresion-lineal-simple', current: false },
+  { name: 'About', href: '/about', current: false },
 ]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 function Navbar({account, ethereum_balance, network, my_user}) {
+
+
 
 
   const [effectLogin, setEffectLogin] = useState(false)
@@ -73,7 +66,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                         <div className="relative grid gap-8 bg-white dark:bg-dark-main p-7">
                             <NavLink
                                 to={`/perfil/${my_user && my_user.account}`}
-                                className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out border dark:border-dark-third shadow dark:hover:bg-dark-third hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-50"
+                                className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out border dark:border-zinc-900 shadow dark:hover:bg-dark-third hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-gray-500 focus-visible:ring-opacity-50"
                             >
                                 <div className="flex h-8 w-8 shrink-0 items-center justify-center text-white dark:text-dark-txt sm:h-12 sm:w-12">
                                     <img
@@ -151,7 +144,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                     onMouseUp={() => setEffectLogin(false)}
                     className={`${
                         effectLogin && "animate-click"
-                    } lg:hidden inline-flex bx bx-user-circle text-3xl mx-1 rounded-md p-2 items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500`}
+                    } lg:hidden inline-flex bx bx-user-circle text-3xl mx-1 rounded-md p-2 items-center justify-center text-zinc-400 hover:bg-zinc-100 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500`}
                 />
                 {popoverTransicion()}
             </Popover>
@@ -363,7 +356,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                 </div>
                  
                   {/* Mobile menu button */}
-                  <Popover.Button className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-zinc-400 hover:bg-zinc-100 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-500">
                     <span className="sr-only">Open menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -402,7 +395,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-100 text-gray-900' : 'hover:bg-gray-50',
+                      item.current ? 'bg-gray-100 dark:bg-zinc-800 dark:text-zinc-300 text-gray-900' : 'hover:bg-gray-50 dark:hover:bg-zinc-800',
                       'block rounded-md py-2 px-3 text-base font-medium'
                     )}
                   >
@@ -411,33 +404,6 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                 ))}
               </div>
               <div className="border-t border-gray-200 pt-4 pb-3">
-                <div className="max-w-3xl mx-auto px-4 flex items-center sm:px-6">
-                  <div className="flex-shrink-0">
-                    <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                  </div>
-                  <div className="ml-3">
-                    <div className="text-base font-medium text-gray-800">{user.name}</div>
-                    <div className="text-sm font-medium text-gray-500">{user.email}</div>
-                  </div>
-                  <button
-                    type="button"
-                    className="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
-                <div className="mt-3 max-w-3xl mx-auto px-2 space-y-1 sm:px-4">
-                  {userNavigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block rounded-md py-2 px-3 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
               </div>
             </Popover.Panel>
           </>

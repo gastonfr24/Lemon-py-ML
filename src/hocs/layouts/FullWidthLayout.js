@@ -6,7 +6,9 @@ import Alert from "components/alerts/alert";
 import { useEffect } from "react";
 import { get_network_id, loadweb3 } from "redux/actions/web3";
 import { get_my_user_detail } from "redux/actions/user";
+
 import Subnavbar from "components/navigation/Subnavbar";
+
 
 const FullWidthLayout = ({children, loadweb3, get_network_id, my_user, get_my_user_detail}) =>{
 

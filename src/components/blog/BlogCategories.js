@@ -39,7 +39,7 @@ const BlogCategories =({get_categories, categories}) =>{
                       className="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto"
                     >
                       <span aria-hidden="true" className="absolute inset-0">
-                        <img src={`${process.env.REACT_APP_API_URL}${category.thumbnail}`} alt="" className="w-full h-full object-center object-cover" />
+                        <img src={category.thumbnail} alt="" className="w-full h-full object-center object-cover" />
                       </span>
                       <span
                         aria-hidden="true"

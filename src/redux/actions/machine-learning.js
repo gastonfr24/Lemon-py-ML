@@ -1,6 +1,8 @@
 import {
     CREATE_RLS_SUCCESS,
-CREATE_RLS_FAIL
+CREATE_RLS_FAIL,
+GET_RLS_SUCCESS,
+GET_RLS_FAIL
 } from './types'
 
 import axios from 'axios'
@@ -33,7 +35,7 @@ export const create_rls = (exp,gan, loading, alert) => async dispatch =>{
             config
         )
 
-        if(res.status === 200){
+        if(res.status === 201){
             dispatch({
                 type: CREATE_RLS_SUCCESS,
                 payload: res.data
@@ -57,4 +59,37 @@ export const create_rls = (exp,gan, loading, alert) => async dispatch =>{
 
     }
 }
+
+export const get_rls = () => async dispatch =>{
+     //configuración para axios
+    const config ={
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+    };
+
+
+    // hacemos el GET
+    try{
+        const res = await axios.get(
+            `${process.env.REACT_APP_API_URL}/api/ml/simple-regresion`,
+            config
+
+
+        )
+        if(res.status === 200){
+            dispatch({
+                type: GET_RLS_SUCCESS,
+                payload: res.data
+            })
+        }
+    }catch{
+        dispatch({
+            type:GET_RLS_FAIL
+        })
+    }
+
+}
+    
 

@@ -19,7 +19,7 @@ const BlogCard = (data) => {
               >
           <img
             className="h-48 w-full object-cover scale-110 transition-all duration-400 hover:scale-100"
-            src={`${process.env.REACT_APP_API_URL}${post.thumbnail}`}
+            src={post.thumbnail}
             alt=""
           />
           </Link>
