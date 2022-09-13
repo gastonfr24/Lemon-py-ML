@@ -60,7 +60,7 @@
 
 <div class="flex justify-end items-end">
 <div className='w-3/6 xl:w-3/6 mt-2 sm:w-2/4 flex justify-end items-end'>
-<button className='text-sm bg-zinc-800 hover:bg-green-700 hover:font-semibold hover:text-l  rounded-xl px-4 py-2'>
+<button className='text-sm bg-zinc-800 hover:bg-green-700 hover:font-semibold hover:text-l hover:px-3 rounded-xl px-4 py-2'>
 <div className='flex'>
 <MdOutlineSimCardDownload className='mr-1 text-xl'/>
   <h1 className=''>Descargar Dataset</h1>

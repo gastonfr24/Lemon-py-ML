@@ -11,7 +11,8 @@ import { Spinner } from 'flowbite-react/lib/esm/components';
 import { get_rls } from 'redux/actions/machine-learning';
 import RegLinealSimple from 'components/machine-learning/RegLinealSimple';
 
-
+  //Icons
+  import { MdOutlineDangerous } from "react-icons/md";
 
 function RegresionLS({create_rls, setAlert, user, get_rls,
 
