@@ -57,3 +57,12 @@ export const CREATE_RLS_FAIL = "CREATE_RLS_FAIL";
 
 export const GET_RLS_SUCCESS = 'GET_RLS_SUCCESS';
 export const GET_RLS_FAIL = 'GET_RLS_FAIL';
+
+// Projects
+
+export const GET_PROJECTS_SUCCESS = 'GET_PROJECTS_SUCCESS';
+export const GET_PROJECTS_FAIL = 'GET_PROJECTS_FAIL';
+
+// Prediction Regresion Lineal Múltiple
+export const CREATE_PREDICT_SUCCESS = "CREATE_PREDICT_SUCCESS";
+export const CREATE_PREDICT_FAIL = "CREATE_PREDICT_FAIL";

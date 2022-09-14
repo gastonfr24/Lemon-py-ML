@@ -1,14 +1,28 @@
+from os import stat
 from apps.category import serializers
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models import RegresionLinealSimple
-from .serializers import RegresionLinealSimpleSerializer      
+from .models import RegresionLinealSimple, ProjectML
+from .serializers import ProjectSerializer      
            
-            #Importar las librerías
+
+ #Importar las librerías
 import numpy as np
 import pandas as pd
+from joblib import load
+
+class ProjectsListView(APIView):
+     def get( self, request, *args, **kwargs):
+        if ProjectML.objects.all().exists():
+
+            projects = ProjectML.objects.all()
+            serializer = ProjectSerializer(projects, many=True)
+
+
+
+            return Response({'projects':serializer.data}, status=status.HTTP_200_OK)
 
 
 class PreprocessingView(APIView):
@@ -86,3 +100,39 @@ class PreprocessingView(APIView):
         
         else:
             return Response({'rls': {'salario_predict':'sin resultados'}}, status= status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class MultipleRegression(APIView):
+     def post( self, request, *args, **kwargs):
+        data= self.request.data
+
+        X_data = []
+        X_data.append(data['RyD'])
+        X_data.append(data['Administration'])
+        X_data.append(data['Marketing'])
+
+        if data['State'] == 'New York':
+            X_data.append(0)
+            X_data.append(0)
+
+        if data['State'] == 'Florida':
+            X_data.append(0)
+            X_data.append(1)
+
+        if data['State'] == 'California':
+            X_data.append(1)
+            X_data.append(0)
+
+        X_data = np.array(X_data, dtype=np.float)
+
+
+        X_data=X_data.reshape(1, -1)
+
+        regression_model = load('apps/ml/proyects-ml/regresion/RLM/regression.joblib')
+
+        print(X_data)
+
+        prediction =regression_model.predict(X_data) 
+
+        return Response({'prediction':prediction[0]}, status= status.HTTP_200_OK)
+

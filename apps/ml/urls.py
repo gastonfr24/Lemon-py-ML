@@ -5,5 +5,7 @@ from .views import *
 
 
 urlpatterns = [
-    path('simple-regresion', PreprocessingView.as_view())
+    path('projects', ProjectsListView.as_view()),
+    path('simple-regresion', PreprocessingView.as_view()),
+    path('multiple-regresion', MultipleRegression.as_view())
 ]

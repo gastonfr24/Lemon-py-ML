@@ -2,7 +2,11 @@ import {
     CREATE_RLS_SUCCESS,
 CREATE_RLS_FAIL,
 GET_RLS_SUCCESS,
-GET_RLS_FAIL
+GET_RLS_FAIL,
+GET_PROJECTS_SUCCESS,
+GET_PROJECTS_FAIL,
+CREATE_PREDICT_SUCCESS,
+CREATE_PREDICT_FAIL
 } from './types'
 
 import axios from 'axios'
@@ -92,4 +96,35 @@ export const get_rls = () => async dispatch =>{
 
 }
     
+
+export const get_projects = () => async dispatch =>{
+       //configuración para axios
+       const config ={
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+    };
+
+
+    // hacemos el GET
+    try{
+        const res = await axios.get(
+            `${process.env.REACT_APP_API_URL}/api/ml/projects`,
+            config
+        )
+        if(res.status === 200){
+            dispatch({
+                type: GET_PROJECTS_SUCCESS,
+                payload: res.data
+            })
+        }
+    }catch{
+        dispatch({
+            type:GET_PROJECTS_FAIL
+        })
+    }
+
+}
+
 

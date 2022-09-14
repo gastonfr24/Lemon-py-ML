@@ -1,12 +1,17 @@
 from rest_framework import serializers
-from .models import RegresionLinealSimple
+from .models import ProjectML
 
-class RegresionLinealSimpleSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
+    thumbnail=serializers.CharField(source='get_thumbnail')
     class Meta:
-        model=RegresionLinealSimple
+        model=ProjectML
         fields=[
-            'experiencia',
-            'salario',
+        'title',
+        'dificultad',
+        'url',
+        'tipo',
+        'thumbnail',
+        'subtitle'
         ]
 
 #django rest framework

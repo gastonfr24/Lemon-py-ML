@@ -16,7 +16,11 @@ import BlogCategory from 'containers/pages/blog/categories/BlogCategory';
 import Search from 'containers/pages/Search';
 import CategoriesList from 'containers/pages/blog/categories/CategoriesList';
 import About from 'components/about/About';
+
+// IA Prjects & Machine Learning
 import RegresionLS from 'containers/pages/ml/RegresionLS';
+import ProjectsList from 'containers/pages/IA-Projects/ProjectsList';
+import RegresionLM from 'containers/pages/ml/RegresionLM';
 
 function App() {
   return (
@@ -53,6 +57,8 @@ function App() {
         {/* Machine Learning */}
 
         <Route path='/ML/regresion-lineal-simple' element={<RegresionLS/>} />
+        <Route path='/ML/regresion-lineal-multiple' element={<RegresionLM/>} />
+        <Route path='/IA-Projects' element={<ProjectsList/>} />
 
 
         </Routes>

@@ -377,7 +377,7 @@ function Navbar({account, ethereum_balance, network, my_user}) {
                         Contact
                     </NavLink>
 
-                    <NavLink to="/machine-learning" className="mx-1 text-l dark:hover:text-white hover:text-blue-600 text-gray-600 dark:text-dark-txt text-md font-gilroy-semibold">
+                    <NavLink to="/IA-Projects" className="mx-1 text-l dark:hover:text-white hover:text-blue-600 text-gray-600 dark:text-dark-txt text-md font-gilroy-semibold">
                         IA
                     </NavLink>
 
