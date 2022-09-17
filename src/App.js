@@ -21,6 +21,8 @@ import About from 'components/about/About';
 import RegresionLS from 'containers/pages/ml/RegresionLS';
 import ProjectsList from 'containers/pages/IA-Projects/ProjectsList';
 import RegresionLM from 'containers/pages/ml/RegresionLM';
+import RegresionPoli from 'containers/pages/ml/RegresionPoli';
+import RegresionSVR from 'containers/pages/ml/RegresionSVR';
 
 function App() {
   return (
@@ -58,6 +60,11 @@ function App() {
 
         <Route path='/ML/regresion-lineal-simple' element={<RegresionLS/>} />
         <Route path='/ML/regresion-lineal-multiple' element={<RegresionLM/>} />
+        <Route path='/ML/regresion-polinomica' element={<RegresionPoli/>} />
+        <Route path='/ML/support-vector-regression' element={<RegresionSVR/>} />
+
+
+
         <Route path='/IA-Projects' element={<ProjectsList/>} />
 
 
